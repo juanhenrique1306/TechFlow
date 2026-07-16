@@ -94,21 +94,6 @@ ruff check src tests
 
 O workflow `.github/workflows/ci.yml` executa Ruff e Pytest automaticamente em pushes e pull requests.
 
-## Sugestão de commits semânticos
-
-```text
-chore: cria estrutura inicial do projeto
-docs: adiciona objetivo escopo e metodologia no readme
-feat: configura aplicação flask e banco sqlite
-feat: cria modelo de tarefas
-feat: implementa cadastro e listagem de tarefas
-feat: implementa edição e exclusão de tarefas
-style: cria interface responsiva com tailwind
-test: adiciona testes de validação
-ci: configura pipeline com github actions
-feat: adiciona responsável e prazo como mudança de escopo
-docs: adiciona diagramas uml e roteiro do pitch
-```
 
 ## Beneficiários
 
