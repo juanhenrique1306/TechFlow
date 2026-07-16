@@ -39,7 +39,3 @@ O pipeline é acionado em push e pull request. Ele instala as dependências, exe
 ## 9. Falhas em projetos ágeis e mitigação
 
 As principais causas são requisitos pouco claros, comunicação deficiente, falta de priorização, mudanças sem registro e ausência de testes. O GitHub reduz esses riscos por meio de Issues, Projects, pull requests, histórico de commits e Actions.
-
-## 10. Exemplo de solução existente
-
-Trello e Jira são exemplos de plataformas que utilizam quadros visuais para organizar o trabalho. O TechFlow Tasks reproduz de forma acadêmica o conceito central de cartões e colunas, adaptado para uma equipe de logística.
