@@ -105,4 +105,4 @@ Falhas em projetos ágeis normalmente surgem por requisitos vagos, comunicação
 
 ## Licença
 
-Projeto acadêmico.
+Projeto para fins educacionais.
