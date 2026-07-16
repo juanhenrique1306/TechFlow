@@ -1,4 +1,5 @@
-from datetime import datetime
+from datetime import UTC, datetime
+
 from . import db
 
 
@@ -12,7 +13,11 @@ class Task(db.Model):
     status = db.Column(db.String(20), nullable=False, default="A Fazer")
     responsible = db.Column(db.String(80), nullable=True)
     due_date = db.Column(db.Date, nullable=True)
-    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    created_at = db.Column(
+        db.DateTime,
+        nullable=False,
+        default=lambda: datetime.now(UTC),
+    )
 
     def __repr__(self):
         return f"<Task {self.id}: {self.title}>"
