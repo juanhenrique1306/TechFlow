@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+
+actor "Gestor de Logística" as Gestor
+actor "Colaborador" as Colaborador
+
+rectangle "TechFlow Tasks" {
+  usecase "Visualizar painel" as UC1
+  usecase "Cadastrar tarefa" as UC2
+  usecase "Editar tarefa" as UC3
+  usecase "Excluir tarefa" as UC4
+  usecase "Atualizar status" as UC5
+  usecase "Definir prioridade" as UC6
+  usecase "Definir responsável e prazo" as UC7
+  usecase "Acompanhar indicadores" as UC8
+}
+
+Gestor --> UC1
+Gestor --> UC2
+Gestor --> UC3
+Gestor --> UC4
+Gestor --> UC6
+Gestor --> UC7
+Gestor --> UC8
+Colaborador --> UC1
+Colaborador --> UC5
+@enduml

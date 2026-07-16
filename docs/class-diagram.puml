@@ -1,0 +1,32 @@
+@startuml
+class FlaskApp {
+  +create_app(test_config)
+}
+
+class Task {
+  +id: Integer
+  +title: String
+  +description: Text
+  +priority: String
+  +status: String
+  +responsible: String
+  +due_date: Date
+  +created_at: DateTime
+}
+
+class TaskRoutes {
+  +dashboard()
+  +create_task()
+  +edit_task(task_id)
+  +delete_task(task_id)
+  +update_status(task_id)
+}
+
+class TaskService {
+  +validate_task_data(data)
+}
+
+FlaskApp --> TaskRoutes
+TaskRoutes --> Task
+TaskRoutes --> TaskService
+@enduml

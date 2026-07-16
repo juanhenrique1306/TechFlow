@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}TechFlow Tasks{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eef8ff',
+                500: '#0ea5e9',
+                700: '#0369a1',
+                900: '#0c4a6e'
+              }
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800">
+    <header class="bg-slate-900 text-white shadow">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="{{ url_for('main.dashboard') }}" class="text-xl font-bold">TechFlow Tasks</a>
+            <a href="{{ url_for('main.create_task') }}"
+               class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold hover:bg-sky-400">
+                Nova tarefa
+            </a>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-6 py-8">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category, message in messages %}
+                <div class="mb-4 rounded-lg border px-4 py-3
+                    {% if category == 'success' %}border-emerald-300 bg-emerald-50 text-emerald-800
+                    {% else %}border-red-300 bg-red-50 text-red-800{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
